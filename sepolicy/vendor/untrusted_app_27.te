@@ -1,1 +1,12 @@
 get_prop(untrusted_app_27, persist_camera_prop)
+allow untrusted_app_27 app_data_file:file { execute  execute_no_trans };
+allow untrusted_app_27 ashmem_device:chr_file { open };
+allow untrusted_app_27 mnt_media_rw_file:dir { getattr };
+allow untrusted_app_27 mnt_product_file:dir { getattr };
+allow untrusted_app_27 mnt_vendor_file:dir { getattr };
+allow untrusted_app_27 proc_net:file { read };
+allow untrusted_app_27 proc_tty_drivers:file { read };
+allow untrusted_app_27 proc_version:file { read };
+allow untrusted_app_27 rootfs:dir { read };
+allow untrusted_app_27 sysfs_net:dir { search };
+
