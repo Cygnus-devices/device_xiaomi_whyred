@@ -26,11 +26,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 $(call inherit-product, device/xiaomi/whyred/device.mk)
 
 # Inherit from custom vendor
-$(call inherit-product, vendor/MiuiCamera/config.mk)
+$(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
 
 # Inherit some common Cygnus stuff.
 $(call inherit-product, vendor/cygnus/configs/common.mk)
-$(call inherit-product, vendor/cygnus/configs/common.mk)
+$(call inherit-product, device/qcom/common/common.mk)
 
 PRODUCT_NAME := cygnus_whyred
 PRODUCT_BRAND := Xiaomi
