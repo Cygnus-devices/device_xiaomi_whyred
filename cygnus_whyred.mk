@@ -32,7 +32,6 @@ $(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
 $(call inherit-product, vendor/cygnus/configs/common.mk)
 $(call inherit-product, device/qcom/common/common.mk)
 
-WITH_GAPPS := true
 CYGNUS_BUILD_TYPE := OFFICIAL
 
 PRODUCT_NAME := cygnus_whyred
