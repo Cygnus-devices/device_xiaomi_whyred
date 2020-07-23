@@ -3,9 +3,12 @@ binder_call(hal_camera_default, hal_configstore_default)
 binder_call(hal_camera_default, hal_graphics_allocator_default)
 
 allow hal_camera_default sysfs:file { getattr open read };
-
 allow hal_camera_default sysfs_kgsl:dir { search };
 allow hal_camera_default sysfs_kgsl:file r_file_perms;
+allow hal_camera_default hal_configstore_ISurfaceFlingerConfigs:hwservice_manager { find };
+allow hal_camera_default hal_graphics_allocator_hwservice:hwservice_manager { find };
+allow hal_camera_default vendor_default_prop:property_service { set };
+allow hal_camera_default system_file:file { getattr  read };
 
 # Allow hal_camera_default to search in mnt/vendor
 allow hal_camera_default mnt_vendor_file:dir search;

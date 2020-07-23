@@ -1,0 +1,3 @@
+allow surfaceflinger sysfs_kgsl:dir { search };
+allow surfaceflinger sysfs_kgsl:lnk_file { read open };
+allow surfaceflinger vendor_file:file { read open getattr execute };

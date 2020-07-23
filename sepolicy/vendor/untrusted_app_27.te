@@ -9,4 +9,7 @@ allow untrusted_app_27 proc_tty_drivers:file { read };
 allow untrusted_app_27 proc_version:file { read };
 allow untrusted_app_27 rootfs:dir { read };
 allow untrusted_app_27 sysfs_net:dir { search };
-
+allow untrusted_app_27 sysfs_kgsl:lnk_file read;
+allow untrusted_app_27 sysfs_kgsl:dir { search };
+allow untrusted_app_27 proc_zoneinfo:file read;
+allow untrusted_app_27 proc_qtaguid_stat:file read;

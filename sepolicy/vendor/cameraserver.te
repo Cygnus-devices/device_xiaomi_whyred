@@ -1,0 +1,2 @@
+allow cameraserver vendor_file:file { read open getattr execute };
+allow cameraserver sysfs_kgsl:dir { search };

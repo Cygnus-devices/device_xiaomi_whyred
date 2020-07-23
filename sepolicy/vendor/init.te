@@ -1,3 +1,10 @@
 allow init hal_memtrack_default:process noatsecure;
+allow init vendor_file:file { execute_no_trans };
+allow init firmware_file:filesystem getattr;
+allow init bt_firmware_file:filesystem getattr;
 allow init vendor_file:file { execute };
-
+allow init hwservicemanager:binder { call transfer };
+allow init proc:file { setattr };
+allow init same_process_hal_file:file { execute };
+allow init hal_power_hwservice:hwservice_manager { add };
+allow init hidl_base_hwservice:hwservice_manager { add };
